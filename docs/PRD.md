@@ -268,8 +268,7 @@ ex-skill/
         ├── versions/          # 历史版本存档
         └── knowledge/
             ├── chats/         # 原始聊天记录（解析后文本）
-            ├── photos/        # 截图
-            └── voice/         # 语音转写（如有）
+            └── photos/        # 截图
 ```
 
 ---

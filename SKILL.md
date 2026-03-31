@@ -144,8 +144,7 @@ exes/{slug}/
   ├── versions/     # 历史版本
   └── knowledge/
       ├── chats/    # 聊天记录归档
-      ├── photos/   # 截图
-      └── voice/    # 语音转写
+      └── photos/   # 截图
 ```
 
 完成后告知用户：
@@ -155,11 +154,24 @@ exes/{slug}/
 现在可以直接用 /{slug} 和 TA 对话。
 
 后续操作：
+  和 TA 对话：直接说 /{slug}
   追加记录：说"追加记录"然后粘贴新的聊天记录
   纠正行为：说"这不对，TA 不会这样"
   查看版本：说"查看版本历史"
   回滚版本：说"回滚到 v2"
+  再建一个：说 /create-ex（可以建任意多个前任，每个独立存储）
+  列出所有：说 /list-exes
 ```
+
+---
+
+## `/list-exes` 命令
+
+收到 `/list-exes` 时：
+```bash
+python tools/skill_writer.py --action list --base-dir ./exes
+```
+输出所有已建前任的列表（名字、关系阶段、版本、消息数、最后更新）。无数量上限。
 
 ---
 
@@ -198,4 +210,4 @@ exes/{slug}/
 | `tools/wechat_parser.py` | 提取指定联系人的聊天记录 |
 | `tools/skill_writer.py` | 写入/更新 Skill 文件 |
 | `tools/version_manager.py` | 版本存档与回滚 |
-| `exes/example_xiaomei/` | 示例前任（小美） |
+| `exes/example_liuzhimin/` | 示例前任（Zhimin Liu） |

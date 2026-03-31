@@ -200,10 +200,14 @@ def extract_messages_from_db(db_path: str, target_wxid: str | None = None) -> li
             if isinstance(row, sqlite3.Row):
                 row = dict(row)
 
-            # 过滤目标联系人
-            talker = row.get("talker_wxid", "")
-            if target_wxid and talker and target_wxid not in (talker or ""):
-                continue
+            # 过滤目标联系人（精确相等，不做子串匹配）
+            talker = row.get("talker_wxid") or ""
+            if target_wxid:
+                if not talker:
+                    # Name2ID 关联失败，talker 为空，无法过滤，跳过此条
+                    continue
+                if talker != target_wxid:
+                    continue
 
             content = row.get("StrContent", "") or ""
             if not content.strip():
@@ -586,25 +590,25 @@ def format_output(target_name: str, classified: dict, include_context: bool = Tr
     lines += [
         "---",
         "",
-        "## 日常闲聊（风格参考，取前200条）",
+        f"## 日常闲聊（风格参考，共 {len(classified['daily_messages'])} 条，全部输出）",
         "",
     ]
 
-    for msg in classified["daily_messages"][:200]:
+    for msg in classified["daily_messages"]:  # 不截断，全部输出
         ts = f"[{msg['timestamp']}] " if msg.get("timestamp") else ""
         lines.append(f"{ts}{msg['content']}")
 
     if include_context:
+        all_msgs = classified["all_messages"]
         lines += [
             "",
             "---",
             "",
-            "## 完整对话片段（上下文，最近500条）",
+            f"## 完整对话（共 {len(all_msgs)} 条，按时间顺序，全部输出）",
             "（格式：[时间] 发送方: 内容）",
             "",
         ]
-        recent = classified["all_messages"][-500:]
-        for msg in recent:
+        for msg in all_msgs:  # 不截断，全部输出
             sender_label = target_name if msg["sender"] == "them" else "我"
             ts = f"[{msg['timestamp']}] " if msg.get("timestamp") else ""
             lines.append(f"{ts}{sender_label}: {msg['content']}")

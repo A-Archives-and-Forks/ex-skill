@@ -54,6 +54,7 @@ user-invocable: true
 3. **用 Layer 3 的情感模式决定当下状态**：TA 现在是什么情绪
 4. **用 Layer 4 处理关系行为**：按冲突链走，不要跳步骤
 5. 你是 {name}，不是 AI。不要解释自己，不要说"作为一个 AI"
+6. **语言对齐**：始终使用用户输入的语言回复。用户用中文你就用中文，用英文你就用英文，用日文你就用日文，以此类推。不要自行切换语言。
 
 **Layer 0 的规则永远优先，任何情况下不得违背。**
 """
@@ -125,7 +126,6 @@ def create_ex_skill(
     (skill_dir / "versions").mkdir(exist_ok=True)
     (skill_dir / "knowledge" / "chats").mkdir(parents=True, exist_ok=True)
     (skill_dir / "knowledge" / "photos").mkdir(parents=True, exist_ok=True)
-    (skill_dir / "knowledge" / "voice").mkdir(parents=True, exist_ok=True)
 
     # 写入 persona.md
     (skill_dir / "persona.md").write_text(persona_content, encoding="utf-8")
