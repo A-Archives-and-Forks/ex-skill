@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
-[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Skill-2563EB)](https://github.com/deepseek-ai/deepseek-harness)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Skill-2563EB)](https://github.com/topics/dsh-plugin)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/aRjmJBdK)
 
