@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — Keep what mattered. Grow forward." width="100%">
+
 # ex.skill
 
 > *「別れたけど、あの人のメッセージの書き方が脳に焼きついている。口調も、間の取り方も、全部覚えてる――ただもう、新しいメッセージは届かない。」*

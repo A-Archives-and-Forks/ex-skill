@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — 留住值得的，继续向前生长" width="100%">
+
 # 前任.skill
 
 > *"分手了，但 TA 的说话方式还刻在你脑子里，每条微信的语气你都记得，可就是再也收不到了"*
@@ -7,6 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Skill-2563EB)](https://github.com/deepseek-ai/deepseek-harness)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/aRjmJBdK)
 
@@ -83,6 +86,20 @@ git clone https://github.com/titanwings/ex-skill .claude/skills/create-ex
 git clone https://github.com/titanwings/ex-skill ~/.claude/skills/create-ex
 ```
 
+### DeepSeek Harness（DSH）
+
+DeepSeek Harness 原生发现文件系统 Skill：项目级目录为 `.dsh/skills/`，所有项目共用的用户目录为 `$DSH_HOME/skills/`（默认 `~/.dsh/skills/`）。无需适配器，也不需要改动核心工作流。
+
+```bash
+# 安装到当前项目（在 git 仓库根目录执行）
+mkdir -p .dsh/skills
+git clone https://github.com/titanwings/ex-skill .dsh/skills/ex-skill
+
+# 或安装到 DSH 用户目录（所有项目可用）
+mkdir -p ~/.dsh/skills
+git clone https://github.com/titanwings/ex-skill ~/.dsh/skills/ex-skill
+```
+
 ### 依赖（可选）
 
 ```bash
@@ -95,7 +112,7 @@ pip3 install -r requirements.txt
 
 ## 使用
 
-在 OpenClaw 或 Claude Code 中输入：
+在 OpenClaw、Claude Code 或 DeepSeek Harness 中输入：
 
 ```
 /create-ex

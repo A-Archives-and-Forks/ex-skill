@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — Keep what mattered. Grow forward." width="100%">
+
 # ex.skill
 
 > *"Вы расстались, но манера их переписки навсегда отпечаталась в памяти. Вы помните каждую интонацию, каждую паузу — просто больше не получите ни одного сообщения."*

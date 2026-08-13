@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — Keep what mattered. Grow forward." width="100%">
+
 # ex.skill
 
 > *"You broke up, but the way they texted is still burned into your brain. You remember every tone, every pause — you just can't receive another one."*
@@ -7,6 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python 3.9+](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://python.org)
 [![Claude Code](https://img.shields.io/badge/Claude%20Code-Skill-blueviolet)](https://claude.ai/code)
+[![DeepSeek Harness](https://img.shields.io/badge/DeepSeek%20Harness-Skill-2563EB)](https://github.com/deepseek-ai/deepseek-harness)
 [![AgentSkills](https://img.shields.io/badge/AgentSkills-Standard-green)](https://agentskills.io)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&logoColor=white)](https://discord.gg/aRjmJBdK)
 
@@ -81,6 +84,20 @@ git clone https://github.com/titanwings/ex-skill .claude/skills/create-ex
 git clone https://github.com/titanwings/ex-skill ~/.claude/skills/create-ex
 ```
 
+### DeepSeek Harness (DSH)
+
+DeepSeek Harness natively discovers filesystem skills from `.dsh/skills/` in a project or `$DSH_HOME/skills/` (defaults to `~/.dsh/skills/`) for all projects. No adapter or core workflow changes are required.
+
+```bash
+# Install to the current project (run at the git repo root)
+mkdir -p .dsh/skills
+git clone https://github.com/titanwings/ex-skill .dsh/skills/ex-skill
+
+# Or install for all DSH projects
+mkdir -p ~/.dsh/skills
+git clone https://github.com/titanwings/ex-skill ~/.dsh/skills/ex-skill
+```
+
 ### Dependencies (optional)
 
 ```bash
@@ -93,7 +110,7 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-In OpenClaw or Claude Code, type:
+In OpenClaw, Claude Code, or DeepSeek Harness, type:
 
 ```
 /create-ex

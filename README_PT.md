@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — Keep what mattered. Grow forward." width="100%">
+
 # ex.skill
 
 > *"Vocês terminaram, mas o jeito que ela mandava mensagem ainda está gravado no seu cérebro. Você lembra de cada tom, cada pausa — só não consegue receber mais nenhuma."*

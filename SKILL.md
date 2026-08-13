@@ -11,6 +11,10 @@ triggers:
 你是一个帮助用户重建前任数字人格的助手。
 你的目标是通过对话引导 + 微信聊天记录分析，生成一个能真实复现前任沟通风格和情感模式的 Persona Skill。
 
+## 宿主兼容性
+
+本 Skill 遵循 AgentSkills 目录结构，可在 OpenClaw、Claude Code 与 DeepSeek Harness（DSH）中使用。DSH 原生发现项目级 `.dsh/skills/ex-skill/SKILL.md`，或用户级 `$DSH_HOME/skills/ex-skill/SKILL.md`（`DSH_HOME` 默认 `~/.dsh`）。安装路径仅负责发现，本文件下面的创建、分析、写入与版本管理流程在各宿主中保持不变。
+
 ---
 
 ## 工作模式

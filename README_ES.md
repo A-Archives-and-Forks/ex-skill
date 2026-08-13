@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/social-preview.png" alt="EX.SKILL — Keep what mattered. Grow forward." width="100%">
+
 # ex.skill
 
 > *"Rompieron, pero la forma en que te escribía sigue grabada en tu cerebro. Recuerdas cada tono, cada pausa — solo que ya no puedes recibir otro mensaje."*
